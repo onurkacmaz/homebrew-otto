@@ -5,23 +5,23 @@
 class Otto < Formula
   desc "Terminal-based MySQL and PostgreSQL client"
   homepage "https://github.com/onurkacmaz/otto"
-  version "1.2.3"
+  version "1.3.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.2.3/otto_darwin_amd64.tar.gz"
-      sha256 "c2b36b3f497c871746d9d0f0cbe1ff1803262f0092750272af7ad38eb15970ef"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.0/otto_darwin_amd64.tar.gz"
+      sha256 "e04aaa12de5929b2dc1bad872aaa0df8bc069659e8d44c0105ba2dc0606589fa"
 
-      def install
+      define_method(:install) do
         bin.install "otto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.2.3/otto_darwin_arm64.tar.gz"
-      sha256 "f43eea24cca5db51896dbb6d6f845fbf2d69ae20865ac7dce95f90b67ee03dc7"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.0/otto_darwin_arm64.tar.gz"
+      sha256 "9e36a15864d037c7117c4c02009189a7c325aabd3cc967ef0c099ad92160ccfd"
 
-      def install
+      define_method(:install) do
         bin.install "otto"
       end
     end
@@ -29,16 +29,16 @@ class Otto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.2.3/otto_linux_amd64.tar.gz"
-      sha256 "ce0d2559f8ed198c28bbc4755ceecece481fffd63a36ea672d54cf8f1867a686"
-      def install
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.0/otto_linux_amd64.tar.gz"
+      sha256 "122c68b2d47965ec10496b0479109fe58fd6a0b57f5b7bdc8644e326352ba3c1"
+      define_method(:install) do
         bin.install "otto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.2.3/otto_linux_arm64.tar.gz"
-      sha256 "e7a4c610b1841cc8f13d124bb8e39b974178f141692745cf0479959b4263d9b6"
-      def install
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.0/otto_linux_arm64.tar.gz"
+      sha256 "f7c08923f171eac859d8a7c7614bab169a77299e5349236585c6f1eb0d2bf509"
+      define_method(:install) do
         bin.install "otto"
       end
     end
