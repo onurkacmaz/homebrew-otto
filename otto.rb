@@ -5,21 +5,21 @@
 class Otto < Formula
   desc "Terminal-based MySQL and PostgreSQL client"
   homepage "https://github.com/onurkacmaz/otto"
-  version "1.3.2"
+  version "1.3.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.2/otto_darwin_amd64.tar.gz"
-      sha256 "0e7ad6098fca8c9c756280cc992884d6fe0be0c798dd35b544fcf7d007321bf6"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.3/otto_darwin_amd64.tar.gz"
+      sha256 "11009c3c82d3d5c7ad4ec01ef6951fe991802ed7356af35b513a8015e4219886"
 
       define_method(:install) do
         bin.install "otto"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.2/otto_darwin_arm64.tar.gz"
-      sha256 "7ac4aa6f516d89f97e194af727438ad4306293d8b8b8dae5bb0b8de8fce03769"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.3/otto_darwin_arm64.tar.gz"
+      sha256 "7e2460425d6b79790714e06f155bb37e301e886fe9743d96bdb6a65776797d30"
 
       define_method(:install) do
         bin.install "otto"
@@ -29,15 +29,15 @@ class Otto < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.2/otto_linux_amd64.tar.gz"
-      sha256 "d0cec78b1fe07c85ccb9c4654b118ee0a43d17957fbcbd9b3d83f294a814214b"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.3/otto_linux_amd64.tar.gz"
+      sha256 "f03841d566de0a131325aa60a372eb42dcf3a168f0a25eeec49c916b2a3a8c06"
       define_method(:install) do
         bin.install "otto"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.2/otto_linux_arm64.tar.gz"
-      sha256 "90595f282c07bd0f796b3adb279bf0cba04dbb71fc67239cf0d97ac27678afe7"
+      url "https://github.com/onurkacmaz/otto/releases/download/v1.3.3/otto_linux_arm64.tar.gz"
+      sha256 "417475f773169ef821cb14caebdb087624da5802b461367bdd2560cd287e8cfc"
       define_method(:install) do
         bin.install "otto"
       end
